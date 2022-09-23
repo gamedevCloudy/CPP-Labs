@@ -1,5 +1,5 @@
 #include<iostream>
-
+//to do matrix operations
 using namespace std; 
 
 void AddMatrix(int m1[], int m2[])
