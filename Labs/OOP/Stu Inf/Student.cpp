@@ -71,11 +71,12 @@ class Student{
 int main()
 {
     cout<<"Hello world\n"; 
-    Student stu1; 
-    Student stu2(stu1);
+    Student stu1; //default consturctor will be called
+    Student stu2(stu1); //copy constructor will be called
 
     stu1.Display(); 
     stu2.Display(); 
-
+    //after both are called, once main ends, destructor is called. 
+    
     return 0;
 }
