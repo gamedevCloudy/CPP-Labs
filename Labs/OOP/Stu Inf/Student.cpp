@@ -13,7 +13,7 @@ class Student{
         string bloodgrp; 
         int phone;
         string addr;
-    Student()
+    Student() //default consturctor - reads values manually.
     {
         cout<<"Enter name:";
         cin>>name;  
@@ -33,19 +33,7 @@ class Student{
         cin>>addr;
         cout<<endl;
     }
-
-    // Student ()
-    // {
-    //     name = "None"; 
-    //     roll = 0;
-    //     cls = 0; 
-    //     // div = "A"; 
-    //     dob = 000000; 
-    //     bloodgrp = "OO+"; 
-    //     phone = 000000000;
-    //     addr = "Somewhere on earth";
-    // }
-    Student (Student &stu)
+    Student (Student &stu)//copy consturctor copies values from a reference to other object of the same class.
     {
         name = stu.name; 
         roll = stu.roll;
@@ -56,11 +44,24 @@ class Student{
         phone = stu.phone;
         addr = stu.addr;
     }
-    ~Student()
+   
+    Student (string na, int rolle,int clse, char dive, int dobe, string bld, int phn, string adr )//parameterised consturctor - values are passed in as paramerters.
+    {
+        name = na; 
+        roll = rolle;
+        cls = clse; 
+        div = dive; 
+        dob = dobe; 
+        bloodgrp = bld; 
+        phone = phn;
+        addr = adr;
+    }
+    ~Student()//destructor - called once object is to be removed forom memory.
     {
         cout<<"Ended Student Object.";
     }
-    public: void Display(){
+    public: void Display() //class method
+    {
         cout<<"\nHello "<<name<<" \nRoll:"<<roll<<"\nClass"<<cls<<div<<"\nDOB:"<<dob<<"\nblood grp: "<<bloodgrp<<"\nPh.no."<<phone<<"\nAddress:"<<addr<<endl; 
         cout<<"\n\n"; 
     }
