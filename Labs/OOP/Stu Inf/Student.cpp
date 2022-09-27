@@ -45,7 +45,8 @@ class Student{
         addr = stu.addr;
     }
    
-    Student (string na, int rolle,int clse, char dive, int dobe, string bld, int phn, string adr )//parameterised consturctor - values are passed in as paramerters.
+    Student (string na, int rolle,int clse, char dive, int dobe, string bld, int phn, string adr )
+    //parameterised consturctor - values are passed in as paramerters.
     {
         name = na; 
         roll = rolle;
@@ -56,7 +57,9 @@ class Student{
         phone = phn;
         addr = adr;
     }
-    ~Student()//destructor - called once object is to be removed forom memory.
+
+    ~Student()
+    //destructor - called once object is to be removed forom memory.
     {
         cout<<"Ended Student Object.";
     }
