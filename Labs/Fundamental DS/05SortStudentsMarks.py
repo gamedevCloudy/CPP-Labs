@@ -11,14 +11,16 @@ def ReadMarks():
 
 #/usr/bin/python3
 def ReadFile():
-    f = open("NewList.csv", "r")
-    x = f.readlines()
-    print("\n", x)
-    y = x[0].split()
-    print(y)
-    return [0,0]
-    # x = x.split(",")
-    # return x
+    f = open("../Fundamental DS/Case/NewList.csv", "r")
+    x = f.readline()
+    y = x.split(",")
+    z = []
+    for i in range(len(y)-1): 
+        z.append(int(y[i]))
+
+    # y.pop("")
+    print(z)
+    return z
 
 
 def BubbleSort(arr):
@@ -31,15 +33,22 @@ def BubbleSort(arr):
                 swapped = True
                 arr[j],arr[j+1] = arr[j+1],arr[j]
         passes +=1
-        print(arr, passes,"Swap done")      
+        print(arr, passes,"Swap done\n\n")      
         if not swapped: 
             return
     # return arr
-
+def SelectionSort(arr): 
+    for i in range(len(arr)-1):
+        for j in range(i, len(arr)): 
+            print(arr[i], "", arr[j])
+            if(arr[i]>arr[j]):
+                arr[j],arr[i]=arr[i],arr[j]
+    return arr; 
 # ReadMarks()
 # print(BubbleSort(marks))
 
-print(BubbleSort(ReadFile()))
+# print(BubbleSort(ReadFile()))
+print(SelectionSort(ReadFile()))
 
 
 
