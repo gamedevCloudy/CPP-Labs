@@ -1,15 +1,23 @@
-arr = [5,4,3,7,65,4,3,54]
+#/usr/bin/python3
 
-def H(): print("hello")
-def BubbleSort(int arr):
-    for i in range(0, len(arr)):
-        for j in range(i,len(arr)):
-            if arr[i]>=arr[j]: 
-                arr[i],arr[j] = arr[j],arr[i]
-        print(arr)
-    return arr
+def BubbleSort(arr):
+    swapped = False
+    for i in range(0, len(arr)-1):
+        passes = 0
+        for j in range(len(arr)-1):
+            
+            if arr[j]>arr[j+1]: 
+                swapped = True
+                arr[j],arr[j+1] = arr[j+1],arr[j]
+        passes +=1
+        print(arr, passes,"Swap done")      
+        if not swapped: 
+            return
+    # return arr
 
-print(BubbleSort(arr))
+arre = [5,4,2,7,3]
+
+print(BubbleSort(arre))
 
 
 
