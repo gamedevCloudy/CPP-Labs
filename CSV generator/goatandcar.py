@@ -1,9 +1,9 @@
 
 import random as r
 from re import X;
+
 arre =[]
 sarr = []
-
 
 def GenArrays():
     for i in range(100):
@@ -19,6 +19,7 @@ def GenArrays():
             else: 
                 x[2] = 1
         arre.append(x)
+
 
 def GetSample(): 
     for i in arre:
@@ -62,8 +63,6 @@ def main():
         ct+=i
     averangeChanceofWin = ct/len(won)
     percentageChange = round(averangeChanceofWin,5)*100
-
     print("Samples:", sampleCount, "\t Door1: ", couldWinIfDintChange, "\t Door2: ", couldWinIfDidChange, "\n Average percentage chance of winning if door was changed: ", percentageChange)
-
 
 main()           
