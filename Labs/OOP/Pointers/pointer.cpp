@@ -10,7 +10,7 @@ class Base
             } 
 };
 class der: Base
-{ 
+{  
     public: int ne;
 };
 
