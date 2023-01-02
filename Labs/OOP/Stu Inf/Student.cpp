@@ -13,6 +13,7 @@ class Student{
         string bloodgrp; 
         int phone;
         string addr;
+        static int stuct;
     Student() //default consturctor - reads values manually.
     {
         cout<<"Enter name:";
@@ -32,6 +33,7 @@ class Student{
         cout<<"Enter Address: ";
         cin>>addr;
         cout<<endl;
+        stuct++; 
     }
     Student (Student &stu)//copy consturctor copies values from a reference to other object of the same class.
     {
@@ -43,6 +45,7 @@ class Student{
         bloodgrp = stu.bloodgrp; 
         phone = stu.phone;
         addr = stu.addr;
+        stuct++; 
     }
    
     Student (string na, int rolle,int clse, char dive, int dobe, string bld, int phn, string adr )
@@ -56,6 +59,7 @@ class Student{
         bloodgrp = bld; 
         phone = phn;
         addr = adr;
+        stuct++; 
     }
 
     ~Student()
@@ -77,7 +81,7 @@ int main()
     cout<<"Hello world\n"; 
     Student stu1; //default consturctor will be called
     Student stu2(stu1); //copy constructor will be called
-
+    cout<<stu1.stuct; 
     stu1.Display(); 
     stu2.Display(); 
     //after both are called, once main ends, destructor is called. 
