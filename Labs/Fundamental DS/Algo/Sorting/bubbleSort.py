@@ -4,7 +4,7 @@ def BubbleSort(arr):
     swapped = False
     for i in range(0, len(arr)-1):
         passes = 0
-        for j in range(len(arr)-1):
+        for j in range(i,len(arr)-1):
             
             if arr[j]>arr[j+1]: 
                 swapped = True
@@ -12,7 +12,7 @@ def BubbleSort(arr):
         passes +=1
         print(arr, passes,"Swap done")      
         if not swapped: 
-            return
+            return "Sorted"
     # return arr
 
 arre = [5,4,2,7,3]
